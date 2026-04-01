@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | LankaDrive Auto Sales (Pvt) Ltd</title>
+  <meta name="description" content="Contact LankaDrive Auto Sales in Colombo. Submit an inquiry, book a test drive, or visit our showroom. We're here to help you find your perfect car." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra page-specific tweaks */
+    .success-banner {
+      display: none;
+      background: linear-gradient(135deg, #2D6A4F, #52B788);
+      color: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      align-items: center;
+      gap: 0.75rem;
+      animation: slideDown 0.4s ease;
+    }
+    .success-banner.show { display: flex; }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .error-msg {
+      color: var(--accent);
+      font-size: 0.78rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+    .form-control.invalid { border-color: var(--accent); }
+    .form-group.has-error .error-msg { display: block; }
+
+    /* Map embed stand-in */
+    .map-embed {
+      width: 100%;
+      height: 280px;
+      border: none;
+      border-radius: var(--radius-lg);
+      margin-top: 2rem;
+      box-shadow: var(--shadow-sm);
+      background: var(--offwhite);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: var(--mid-grey);
+      border: 2px dashed var(--light-grey);
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .process-steps { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="LankaDrive Logo" />
+        <div class="logo-text">
+          <span class="logo-name">LankaDrive</span>
+          <span class="logo-sub">Auto Sales (Pvt) Ltd</span>
+        </div>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="vehicles.html">Vehicles</a>
+        <a href="services.html">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="nav-cta active">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Contact Us</span>
+      </nav>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Send an inquiry or visit us in Colombo.</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- ===== LEFT: INFO ===== -->
+        <div class="contact-info">
+          <span class="badge">Get In Touch</span>
+          <h3>We're Here to Help</h3>
+          <p>Whether you'd like to inquire about a vehicle, arrange a test drive, ask about leasing options, or simply find out more about what we offer — our friendly team is ready to assist you.</p>
+
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-card-icon">📍</div>
+              <div class="info-card-text">
+                <h4>Showroom Address</h4>
+                <p>No. 142, Baseline Road,<br />Colombo 09, Sri Lanka</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">📞</div>
+              <div class="info-card-text">
+                <h4>Telephone</h4>
+                <a href="tel:+94112345678">+94 11 234 5678</a><br />
+                <a href="tel:+94771234567">+94 77 123 4567</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">📧</div>
+              <div class="info-card-text">
+                <h4>Email Address</h4>
+                <a href="mailto:info@lankadrive.lk">info@lankadrive.lk</a><br />
+                <a href="mailto:sales@lankadrive.lk">sales@lankadrive.lk</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">💬</div>
+              <div class="info-card-text">
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/94771234567">+94 77 123 4567</a>
+                <p>Quick replies during business hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Opening Hours -->
+          <div class="hours-table" style="margin-top:2rem;">
+            <h4>Showroom Hours</h4>
+            <div class="hours-row">
+              <span class="day">Monday – Friday</span>
+              <span class="time">8:30 AM – 6:30 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Saturday</span>
+              <span class="time">9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time">By Appointment Only</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Public Holidays</span>
+              <span class="time">Closed</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div style="margin-top:2rem;">
+            <h4 style="font-family:var(--font-head); font-weight:700; color:var(--text-dark); margin-bottom:0.75rem;">Follow Us</h4>
+            <div class="social-links" style="gap:0.75rem;">
+              <a href="#" class="social-link" aria-label="Facebook" style="background:var(--light-grey); color:var(--primary); width:44px; height:44px; font-size:1.2rem;">📘</a>
+              <a href="#" class="social-link" aria-label="Instagram" style="background:var(--light-grey); color:var(--primary); width:44px; height:44px; font-size:1.2rem;">📸</a>
+              <a href="#" class="social-link" aria-label="WhatsApp" style="background:var(--light-grey); color:var(--primary); width:44px; height:44px; font-size:1.2rem;">💬</a>
+              <a href="#" class="social-link" aria-label="YouTube" style="background:var(--light-grey); color:var(--primary); width:44px; height:44px; font-size:1.2rem;">▶️</a>
+            </div>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="map-embed" role="img" aria-label="Showroom location map placeholder">
+            <span style="font-size:3rem;">🗺️</span>
+            <strong>LankaDrive Showroom — Colombo 09</strong>
+            <span>No. 142, Baseline Road, Colombo 09, Sri Lanka</span>
+            <a href="https://maps.google.com/?q=Baseline+Road+Colombo+09" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:0.75rem;">Open in Google Maps ↗</a>
+            <!--
+              To embed a live Google Map, replace this entire div with:
+              <iframe
+                src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL"
+                width="100%" height="280" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            -->
+          </div>
+        </div>
+
+        <!-- ===== RIGHT: INQUIRY FORM ===== -->
+        <div class="form-card">
+          <h3>Send Us an Inquiry</h3>
+          <p>Fill in the form below and our team will respond within one business day.</p>
+
+          <!-- Success Banner -->
+          <div class="success-banner" id="success-banner" role="alert">
+            <span style="font-size:1.4rem;">✅</span>
+            <span>Thank you! Your inquiry has been submitted successfully. We'll be in touch within one business day.</span>
+          </div>
+
+          <form id="inquiry-form" novalidate>
+
+            <!-- Inquiry Purpose (Radio) -->
+            <div class="form-group">
+              <label>Inquiry Purpose <span class="req">*</span></label>
+              <div class="radio-group">
+                <label class="radio-option" for="purpose-buy">
+                  <input type="radio" id="purpose-buy" name="inquiry_purpose" value="Buy a vehicle" required /> Buy a Vehicle
+                </label>
+                <label class="radio-option" for="purpose-test">
+                  <input type="radio" id="purpose-test" name="inquiry_purpose" value="Request test drive" /> Request a Test Drive
+                </label>
+              </div>
+              <span class="error-msg" id="purpose-error">Please select an inquiry purpose.</span>
+            </div>
+
+            <hr class="form-divider" />
+
+            <!-- Full Name + Email -->
+            <div class="form-row">
+              <div class="form-group" id="grp-name">
+                <label for="full-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="full-name" name="full_name" class="form-control" placeholder="e.g. Nishantha Perera" autocomplete="name" />
+                <span class="error-msg">Please enter your full name.</span>
+              </div>
+              <div class="form-group" id="grp-email">
+                <label for="email">Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" autocomplete="email" />
+                <span class="error-msg">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="form-group" id="grp-phone">
+              <label for="contact-number">Contact Number <span class="req">*</span></label>
+              <input type="text" id="contact-number" name="contact_number" class="form-control" placeholder="e.g. 077 123 4567" autocomplete="tel" maxlength="15" />
+              <span class="error-msg">Please enter a valid contact number.</span>
+            </div>
+
+            <!-- Vehicle Interested In -->
+            <div class="form-group" id="grp-vehicle">
+              <label for="vehicle-interest">Vehicle Interested In <span class="req">*</span></label>
+              <select id="vehicle-interest" name="vehicle_interest" class="form-control">
+                <option value="" disabled selected>— Select a vehicle —</option>
+                <optgroup label="Brand New">
+                  <option value="Toyota Camry 2.5G 2024">Toyota Camry 2.5G 2024 — LKR 18,500,000</option>
+                  <option value="BMW 320d Luxury Line 2024">BMW 320d Luxury Line 2024 — LKR 22,000,000</option>
+                  <option value="Honda Vezel eHEV Z 2024">Honda Vezel e:HEV Z 2024 — LKR 15,800,000</option>
+                </optgroup>
+                <optgroup label="Reconditioned">
+                  <option value="Honda Vezel Hybrid 2023">Honda Vezel Hybrid 2023 — LKR 11,200,000</option>
+                  <option value="Toyota Prius Z Hybrid 2023">Toyota Prius Z Hybrid 2023 — LKR 10,500,000</option>
+                  <option value="Suzuki Swift RS Turbo 2021">Suzuki Swift RS Turbo 2021 — LKR 8,900,000</option>
+                </optgroup>
+                <optgroup label="Used">
+                  <option value="BMW 320i M Sport 2022">BMW 320i M Sport 2022 — LKR 19,800,000</option>
+                  <option value="Toyota Prius A Grade 2020">Toyota Prius A Grade 2020 — LKR 9,200,000</option>
+                  <option value="Suzuki Swift GLX 2019">Suzuki Swift GLX 2019 — LKR 6,500,000</option>
+                </optgroup>
+                <option value="Other / Not Listed">Other / Not Listed — Please describe in message</option>
+              </select>
+              <span class="error-msg">Please select a vehicle of interest.</span>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group" id="grp-message">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" class="form-control" placeholder="Please describe what you're looking for, any specific requirements, preferred date for a test drive, or any questions you may have..."></textarea>
+              <span class="error-msg">Please enter your message.</span>
+            </div>
+
+            <hr class="form-divider" />
+
+            <!-- Subscription Checkbox -->
+            <div class="form-group">
+              <label class="check-option" for="subscribe">
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes" />
+                Subscribe to promotional offers, new arrivals, and exclusive deals from LankaDrive
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="submit-btn" class="btn btn-primary submit-btn">
+              <span id="btn-text">Send Inquiry →</span>
+              <span id="btn-loading" style="display:none;">Sending...</span>
+            </button>
+
+            <p style="font-size:0.78rem; color:var(--mid-grey); margin-top:0.75rem; text-align:center;">
+              🔒 Your information is safe and will never be shared with third parties.
+            </p>
+          </form>
+        </div>
+
+      </div><!-- /contact-layout -->
+    </div>
+  </section>
+
+  <!-- ========== CTA BAND ========== -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Prefer Visiting Us in Person?</h2>
+      <p>Our showroom is open Monday to Saturday. Walk-ins are always welcome at No. 142, Baseline Road, Colombo 09.</p>
+      <a href="vehicles.html" class="btn btn-outline">Browse Our Inventory First</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrap">
+            <img src="images/logo.png" alt="LankaDrive Logo" style="width:40px;height:40px;" />
+            <div class="logo-text">
+              <span class="logo-name">LankaDrive</span>
+              <span class="logo-sub">Auto Sales (Pvt) Ltd</span>
+            </div>
+          </a>
+          <p>Colombo's premier destination for brand new, reconditioned, and used vehicles.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📸</a>
+            <a href="#" class="social-link">💬</a>
+            <a href="#" class="social-link">▶️</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Vehicle Listings</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html">Leasing Assistance</a></li>
+            <li><a href="services.html">Motor Insurance</a></li>
+            <li><a href="services.html">Vehicle Registration</a></li>
+            <li><a href="services.html">Test Drive Booking</a></li>
+            <li><a href="services.html">Custom Sourcing</a></li>
+            <li><a href="services.html">Free Valuation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span class="icon">📍</span><span>No. 142, Baseline Road, Colombo 09</span></div>
+          <div class="footer-contact-item"><span class="icon">📞</span><span>+94 11 234 5678</span></div>
+          <div class="footer-contact-item"><span class="icon">📱</span><span>+94 77 123 4567</span></div>
+          <div class="footer-contact-item"><span class="icon">📧</span><span>info@lankadrive.lk</span></div>
+          <div class="footer-contact-item"><span class="icon">🕒</span><span>Mon – Sat: 8:30 AM – 6:30 PM</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 <span>LankaDrive Auto Sales (Pvt) Ltd</span>. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---- Nav Toggle ----
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+    // ---- Form Validation & Submission ----
+    const form = document.getElementById('inquiry-form');
+
+    function setError(groupId, show) {
+      const grp = document.getElementById(groupId);
+      if (!grp) return;
+      const ctrl = grp.querySelector('.form-control');
+      if (show) {
+        grp.classList.add('has-error');
+        if (ctrl) ctrl.classList.add('invalid');
+      } else {
+        grp.classList.remove('has-error');
+        if (ctrl) ctrl.classList.remove('invalid');
+      }
+      return show;
+    }
+
+    function isValidEmail(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    }
+    function isValidPhone(val) {
+      return /^[\d\s\+\-\(\)]{7,15}$/.test(val.trim());
+    }
+
+    function validateForm() {
+      let hasError = false;
+
+      // Purpose radio
+      const purposeChecked = form.querySelector('input[name="inquiry_purpose"]:checked');
+      const purposeError = document.getElementById('purpose-error');
+      if (!purposeChecked) {
+        purposeError.style.display = 'block';
+        hasError = true;
+      } else {
+        purposeError.style.display = 'none';
+      }
+
+      // Name
+      const name = document.getElementById('full-name').value.trim();
+      if (setError('grp-name', name.length < 2)) hasError = true;
+
+      // Email
+      const email = document.getElementById('email').value.trim();
+      if (setError('grp-email', !isValidEmail(email))) hasError = true;
+
+      // Phone
+      const phone = document.getElementById('contact-number').value.trim();
+      if (setError('grp-phone', !isValidPhone(phone))) hasError = true;
+
+      // Vehicle
+      const vehicle = document.getElementById('vehicle-interest').value;
+      if (setError('grp-vehicle', !vehicle)) hasError = true;
+
+      // Message
+      const message = document.getElementById('message').value.trim();
+      if (setError('grp-message', message.length < 10)) hasError = true;
+
+      return !hasError;
+    }
+
+    // Live clear errors on input
+    ['full-name','email','contact-number','vehicle-interest','message'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('input', () => {
+        const grpId = 'grp-' + id.replace('full-name','name').replace('contact-number','phone').replace('vehicle-interest','vehicle');
+        const grp = document.getElementById(grpId);
+        if (grp) {
+          grp.classList.remove('has-error');
+          el.classList.remove('invalid');
+        }
+      });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!validateForm()) {
+        // Scroll to first error
+        const firstError = form.querySelector('.form-control.invalid, input[name="inquiry_purpose"]');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Simulate submission
+      const btn = document.getElementById('submit-btn');
+      document.getElementById('btn-text').style.display = 'none';
+      document.getElementById('btn-loading').style.display = 'inline';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.disabled = false;
+        document.getElementById('btn-text').style.display = 'inline';
+        document.getElementById('btn-loading').style.display = 'none';
+        const banner = document.getElementById('success-banner');
+        banner.classList.add('show');
+        form.reset();
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => banner.classList.remove('show'), 7000);
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
